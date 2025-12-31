@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xyZ AI (Beta)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <button class="menu-btn icon-btn" onclick="UI.toggleSidebar()" aria-label="Toggle Menu">
+            <i class="fas fa-stream"></i> </button>
+        <span class="logo-text">xyZ <span style="font-weight: 300;">INTELLIGENCE</span></span>
+    </div>
+    
+    <div class="new-chat-btn" onclick="location.reload()">
+        <i class="fas fa-sparkles"></i>
+        <span>Inisiasi Sesi Baru</span>
+    </div>
+
+    <div class="sidebar-content">
+        <div class="history-label">Arsitektur & Protokol</div>
+        
+        <div class="guide-scroll-container">
+            <section class="guide-section">
+                <h4>Core Architecture</h4>
+                <p>xyZ AI adalah manifestasi kecerdasan komputasional berbasis <strong>Native JavaScript Logic</strong>. Sistem ini beroperasi secara otonom tanpa ketergantungan API eksternal, mengintegrasikan analisis pola tingkat lanjut, pemecahan matematika kompleks, dan penalaran logis secara real-time.</p>
+            </section>
+
+            <section class="guide-section">
+                <h4>Parameter Interaksi</h4>
+                <ul class="guide-list">
+                    <li>
+                        <strong>Presisi Logika:</strong> Gunakan input terstruktur untuk memicu algoritma deduksi pola yang akurat.
+                    </li>
+                    <li>
+                        <strong>Komputasi:</strong> Sistem dirancang optimal untuk penyelesaian masalah matematis dan urutan logis.
+                    </li>
+                    <li>
+                        <strong>Integritas Data:</strong> Seluruh proses berpikir terjadi dalam lingkungan aman sesuai protokol privasi yang ketat.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="guide-section">
+                <h4>Lisensi & Ekosistem</h4>
+                <div class="copyright-box">
+                    <p>&copy; 2025 xyZ.</p>
+                    <p>Direkayasa oleh <strong>xyZ</strong>.</p>
+                    <div class="version-tag">
+                        <span>Build:</span> Native-JS 1.0.2 &bull; <span>Status:</span> Stable Beta
+                    </div>
+                </div>
+            </section>
+            
+
+        </div>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="footer-item">
+            <i class="fas fa-crown"></i> Akses Premium
+        </div>
+        <div class="footer-item" onclick="alert('Panel konfigurasi sedang memuat...')">
+            <i class="fas fa-sliders-h"></i> Konfigurasi
+        </div>
+    </div>
+</aside>
+
+
+    <main class="main-container">
+        <header class="mobile-header">
+            <button onclick="UI.toggleSidebar()"><i class="fas fa-bars"></i></button>
+            <span>xyZ AI</span>
+            <div style="width: 24px;"></div> 
+        </header>
+
+        <div id="chatContainer" class="chat-content">
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="greet-text">
+                    <span class="gradient-text">Halo, User</span>
+                    <br>Ada yang bisa saya bantu?
+                </div>
+                <div class="suggestion-grid">
+                    <div class="card-suggest" onclick="UI.fillInput('Apa itu Kuantum?')">
+                        <p>Apa itu Fisika Kuantum?</p>
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="card-suggest" onclick="UI.fillInput('Hitung 25 * 4 + 10')">
+                        <p>Hitung matematika dasar</p>
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="card-suggest" onclick="UI.fillInput('Jam berapa sekarang?')">
+                        <p>Cek waktu server</p>
+                        <i class="far fa-clock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area-wrapper">
+            <div class="input-box">
+                <div class="input-field-container">
+                    <textarea id="userQuestion" placeholder="Masukkan perintah di sini" rows="1" oninput="UI.autoGrow(this)"></textarea>
+                </div>
+                <div class="input-actions">
+                    <button id="sendBtn" class="send-btn" onclick="Main.process()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <p class="footer-text">xyZ AI dapat menampilkan info yang kurang akurat, harap verifikasi ulang.</p>
+        </div>
+    </main>
+
+    <div id="overlay" class="overlay" onclick="UI.toggleSidebar()"></div>
+
+    <script src="js/data.js"></script>     <script src="js/ui.js"></script>       <script src="js/mtk.js"></script>      <script src="js/search.js"></script>   <script src="js/bahasa.js"></script>   <script src="js/reasoning.js"></script><script src="js/respond.js"></script>  <script src="js/detector.js"></script> <script src="js/main.js"></script>     </body>
+</html>
